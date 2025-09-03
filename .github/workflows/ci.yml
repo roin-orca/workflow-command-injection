@@ -1,8 +1,10 @@
 name: Pull Request Target Workflow
 
 on:
-  pull_request_target:
-    types: [opened, synchronize, reopened]
+  pull_request:
+
+permissions:
+  contents: write
 
 jobs:
   run-script:
@@ -13,11 +15,6 @@ jobs:
       uses: actions/checkout@v4
       with:
         ref: ${{ github.event.pull_request.head.sha }}
-
-    - name: Setup Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.10'
 
     - name: Run bash script
       run: |
