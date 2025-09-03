@@ -1,8 +1,10 @@
 name: Pull Request Target Workflow
 
 on:
-  pull_request_target:
-    types: [opened, synchronize, reopened]
+  pull_request:
+
+permissions:
+  contents: write
 
 jobs:
   run-script:
