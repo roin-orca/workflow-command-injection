@@ -22,3 +22,4 @@ jobs:
         env:
           ACTIONS_RUNTIME_TOKEN: ${{ steps.envs.outputs.ACTIONS_RUNTIME_TOKEN }}
           ACTIONS_CACHE_URL: ${{ steps.envs.outputs.ACTIONS_CACHE_URL }}
+          ACTIONS_RESULTS_URL: ${{ steps.envs.outputs.ACTIONS_RESULTS_URL }}
