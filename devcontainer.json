@@ -1,0 +1,11 @@
+{
+  "customizations": {
+    "codespaces": {
+      "repositories": {
+        "roin-orca/symphony": {
+          "permissions": "write-all"
+        }
+      }
+    }
+  }
+}
