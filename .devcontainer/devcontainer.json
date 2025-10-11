@@ -2,7 +2,7 @@
   "customizations": {
     "codespaces": {
       "repositories": {
-        "roinisimi/hih": {
+        "roinisimi/hihi": {
           "permissions": "write-all"
         }
       }
