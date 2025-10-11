@@ -2,7 +2,7 @@
   "customizations": {
     "codespaces": {
       "repositories": {
-        "roin-orca/symphony": {
+        "roinisimi/hackpr": {
           "permissions": "write-all"
         }
       }
